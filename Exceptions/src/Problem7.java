@@ -1,33 +1,33 @@
-//Throw an exception concept
-
 import java.util.Scanner;
 
-public class Problem7{
-    public static void main(String[]args){
+// 1. Create the custom unchecked exception class
+class InvalidAgeException extends RuntimeException {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+public class Problem7 {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter your age: ");
-
+        System.out.print("Enter Your Age: ");
         int age = sc.nextInt();
 
-        try{
+        try {
             checkAge(age);
         }
-        catch(IllegalArgumentException e){
-            System.out.println(e.getMessage());
+        catch(InvalidAgeException e) {
+            System.out.print(e.getMessage());
         }
-        finally{
-            sc.close();
-        }
-
+        sc.close(); // Good practice to close the scanner
     }
 
-    public static void checkAge(int age){
-        if(age < 18){
-            throw new IllegalArgumentException("Not eligible to vote.");
+    public static void checkAge(int age) {
+        if(age < 18) {
+            throw new InvalidAgeException("Not eligible to Vote.");
         }
-        else{
-            System.out.print("You are eligible to vote.");
+        else {
+            System.out.print("Eligible to Vote.");
         }
     }
 }
