@@ -26,3 +26,23 @@ Collections.reverse(numbers);
 
 *List, Set and Queue are child of Collection Interface. but, map is not because it contains key value pair.
 * Classes like ArrayList, LinkedList, HashSet and vector implement the collection interface.*/
+
+//Dynamic Array
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> marks = new ArrayList<>();
+
+        marks.add(85);
+        marks.add(90);
+        marks.add(75);
+        marks.add(95);
+        marks.add(80);
+
+        marks.add(100);
+
+        System.out.println(marks);
+    }
+}
