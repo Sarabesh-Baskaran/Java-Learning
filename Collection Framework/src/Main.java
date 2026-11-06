@@ -29,20 +29,19 @@ Collections.reverse(numbers);
 
 //Dynamic Array
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Integer> marks = new ArrayList<>();
+     List<Integer> numbers = new ArrayList<>();
+        numbers.add(50);
+        numbers.add(10);
+        numbers.add(30);
 
-        marks.add(85);
-        marks.add(90);
-        marks.add(75);
-        marks.add(95);
-        marks.add(80);
+        Collections.sort(numbers); //It literally sort the number from Small to Big.
 
-        marks.add(100);
-
-        System.out.println(marks);
+        System.out.println(numbers);
     }
 }
