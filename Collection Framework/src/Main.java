@@ -40,7 +40,7 @@ public class Main {
         numbers.add(10);
         numbers.add(30);
 
-        Collections.sort(numbers); //It literally sort the number from Small to Big.
+        Collections.sort(numbers); //Here, we are using Collections is a utility class helps in sorting, searching, reversing.
 
         System.out.println(numbers);
     }
